@@ -1,0 +1,49 @@
+    What is the purpose of this application?
+    Task Manager
+
+    What commands or actions does it support?
+    add, list, complete, delete, exit
+
+    Where does it store its data?
+    In the json file tasks.json
+
+    What was the hardest part of understanding this project?
+    The hardest part of understanding this project was using the git commands. 
+    As you know we have not done this often and are trying to work out most 
+    of the commands while using the cheat sheet. I also had trouble with getting
+    the lab from github into VS Code beacuse I could't remember much about getting
+    started. However, it came back to me as I was looking online. Otehr than that
+    I felt the assignment was self exaplanotory, especially with the directions.
+
+    What change was easiest to make?
+    The easiest change to make was definetly the output message. I simply went
+    and changed the words in the print. Compared to the priority change, this was
+    far easier. 
+
+    What change took the most testing or debugging?
+    The priority change took the most testing. I had to upodate the structure
+    of the task in order to add priority levels, whether they were low, medium 
+    or high. At first I thought I could just add priority to the add task and
+    run the program but I got an error. I realized I needed to update the command
+    itself within the main fucntion in order to call for the fucntion. After the
+    debugging and testing I finally got it to work and continued with the rest of
+    the assignment.
+
+    How did GitHub help you manage your work today?
+    GitHub is very easy to work with once you are able to recognize the git
+    commands. It helped me stay organized and is very safe to use. I am able
+    to work on this program and save it while the main branch remains the same.
+    This adds a safety feature and ensures that the entire program is not broken.
+    The commands like git add, git status, and git commit are very easy to use
+    and help keep me organized.
+
+    If you had more time, what would you improve next?
+    Given more time on this lab I would have added an edit feature for the task.
+    I know that I personally have troubles writing down exactly what I need to
+    do sometimes and would like to be able to change it easily. I also realize
+    that people could split up the task into parts if they wanted to edit it
+    in this way. Another feature I would add is a re-order function. The
+    priority function is a great help but it does not change the task order.
+    Peoples priorities change all the time and would maybe reorder based on 
+    time or priorities. Overall, this assignment was very enjoyable and I am glad
+    it worked on my home PC.
