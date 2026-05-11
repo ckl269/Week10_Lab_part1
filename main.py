@@ -13,14 +13,16 @@ def save_tasks(tasks):
     with open(FILE_NAME, "w") as file:
         json.dump(tasks, file, indent=4)
 
-def add_task(tasks, description):
+def add_task(tasks, description,priority):
     task = {
         "description": description,
+        "priority": priority,
         "completed": False
     }
     tasks.append(task)
     save_tasks(tasks)
-    print("Task added successfully")
+    print("Task saved successfully")
+
 
 def list_tasks(tasks):
     if len(tasks) == 0:
@@ -29,7 +31,11 @@ def list_tasks(tasks):
 
     for i, task in enumerate(tasks):
         status = "Done" if task["completed"] else "Not Done"
-        print(f"{i+1}. {task['description']} [{status}]")
+        priority = task.get("priority", "medium")
+        print(f"{i+1}. {task['description']} [{status}] Priority: {priority}")
+
+def count_tasks(tasks):
+    print(f"Total tasks: {len(tasks)}")
 
 def complete_task(tasks, index):
     if index < 0 or index >= len(tasks):
@@ -51,14 +57,18 @@ def main():
     tasks = load_tasks()
 
     while True:
-        command = input("\nEnter command (add/list/complete/delete/exit): ").strip().lower()
+        command = input("\nEnter command (add/list/count/complete/delete/exit): ").strip().lower()
 
         if command == "add":
             desc = input("Enter task description: ")
-            add_task(tasks, desc)
+            priority = input("Enter task priority (high/medium/low): ")
+            add_task(tasks, desc, priority)
 
         elif command == "list":
             list_tasks(tasks)
+
+        elif command == "count":
+            count_tasks(tasks)
 
         elif command == "complete":
             num = int(input("Enter task number: ")) - 1

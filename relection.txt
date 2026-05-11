@@ -1,0 +1,8 @@
+    What is the purpose of this application?
+    Task Manager
+
+    What commands or actions does it support?
+    add, list, complete, delete, exit
+
+    Where does it store its data?
+    In the json file tasks.json
